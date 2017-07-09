@@ -1,20 +1,18 @@
-##
-#for vc in range(0, VOLUME_MESH.GetNumberOfCells()):
-#        ids = vtk.vtkIdList()   
-#        VOLUME_MESH.GetCellPoints(vc, ids)
-#        t1 = 0
-#        idli = []
-#        for cp in range(0, ids.GetNumberOfIds()):
-##                if (ids.GetId(cp) == 220): t1 = t1+1
-##                if (ids.GetId(cp) == 1): t1 = t1+1
-##                if (ids.GetId(cp) == 2): t1 = t1+1
-#                if (ids.GetId(cp) ==14113645): t1 = t1+1
+
+for vc in range(0, VOLUME_MESH.GetNumberOfCells()):
+        ids = vtk.vtkIdList()   
+        VOLUME_MESH.GetCellPoints(vc, ids)
+        t1 = 0
+        idli = []
+        for cp in range(0, ids.GetNumberOfIds()):
+                if (ids.GetId(cp) == 220): t1 = t1+1
+                if (ids.GetId(cp) == 1): t1 = t1+1
+                if (ids.GetId(cp) == 2): t1 = t1+1
+                if (ids.GetId(cp) ==14113645): t1 = t1+1
 #        if( t1 ==1 ): print 1, vc
 ##        if( t1 ==2 ): print 2, vc
 ##        if( t1 ==3 ): print 3, vc
 ##        if( t1 ==4 ): print 4, vc
-
-
 
 def midpoint(npoints, points, f_mid):
 
